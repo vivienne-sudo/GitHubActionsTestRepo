@@ -1,5 +1,5 @@
 namespace CA2V6CP.Models
-
+    //Error view model for testing
 {
     public class ErrorViewModel
     {
