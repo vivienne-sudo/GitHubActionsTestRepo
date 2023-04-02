@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\ci.yml" />
     <None Include="wwwroot\Images\golf-course.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
