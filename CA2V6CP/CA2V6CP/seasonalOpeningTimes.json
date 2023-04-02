@@ -1,0 +1,19 @@
+{
+  "spring": {
+    "startHour": 8,
+    "endHour": 18
+  },
+  "summer": {
+    "startHour": 7,
+    "endHour": 20
+  },
+  "autumn": {
+    "startHour": 8,
+    "endHour": 18
+  },
+  "winter": {
+    "startHour": 9,
+    "endHour": 16
+  }
+}
+

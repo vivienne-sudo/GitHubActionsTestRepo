@@ -1,0 +1,74 @@
+﻿@model TeeTimeBooking
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+<h4>Edit TeeTimeBooking</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="StartTime" class="control-label"></label>
+                <input asp-for="StartTime" class="form-control" />
+                <span asp-validation-for="StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player1Name" class="control-label"></label>
+                <input asp-for="Player1Name" class="form-control" />
+                <span asp-validation-for="Player1Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player1Handicap" class="control-label"></label>
+                <input asp-for="Player1Handicap" class="form-control" />
+                <span asp-validation-for="Player1Handicap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player2Name" class="control-label"></label>
+                <input asp-for="Player2Name" class="form-control" />
+                <span asp-validation-for="Player2Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player2Handicap" class="control-label"></label>
+                <input asp-for="Player2Handicap" class="form-control" />
+                <span asp-validation-for="Player2Handicap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player3Name" class="control-label"></label>
+                <input asp-for="Player3Name" class="form-control" />
+                <span asp-validation-for="Player3Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player3Handicap" class="control-label"></label>
+                <input asp-for="Player3Handicap" class="form-control" />
+                <span asp-validation-for="Player3Handicap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player4Name" class="control-label"></label>
+                <input asp-for="Player4Name" class="form-control" />
+                <span asp-validation-for="Player4Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player4Handicap" class="control-label"></label>
+                <input asp-for="Player4Handicap" class="form-control" />
+                <span asp-validation-for="Player4Handicap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

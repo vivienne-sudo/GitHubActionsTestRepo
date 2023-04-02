@@ -1,0 +1,93 @@
+﻿@model IEnumerable<TeeTimeBooking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<form method="get" asp-action="Index">
+    <div class="form-group row">
+        <div class="col-md-6">
+        <label for="playerName">Search by player name:</label>
+        <input type="text" class="form-control" id="playerName" name="playerName" value="@ViewBag.CurrentFilter" />
+    </div>
+        <div class="col-md-6 text-right">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a asp-action="Index" class="btn btn-secondary">Reset</a>
+            <a asp-action="Create" class="btn btn-success">Create New</a>
+        </div>
+        </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player1Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player1Handicap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player2Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player2Handicap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player3Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player3Handicap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player4Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player4Handicap)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player1Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player1Handicap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player2Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player2Handicap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player3Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player3Handicap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player4Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player4Handicap)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
