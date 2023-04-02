@@ -5,6 +5,7 @@ namespace CA2V6CP.Models
     public class Golfer
     {
         [Key]
+        public int Id { get; set; }
         public int MembershipNumber { get; set; }
 
         [Required]
