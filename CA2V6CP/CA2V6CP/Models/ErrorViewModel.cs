@@ -1,4 +1,5 @@
 namespace CA2V6CP.Models
+
 {
     public class ErrorViewModel
     {
